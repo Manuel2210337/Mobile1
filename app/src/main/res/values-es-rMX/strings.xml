@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_image_desc">Imagen de inicio de sesión</string>
+    <string name="email_label">Correo electrónico</string>
+    <string name="password_label">Contraseña</string>
+    <string name="login_button">Iniciar sesión</string>
+    <string name="enter_weight">Enter weight(kg)</string>
+    <string name="calculate_bmi">Calcular IMC</string>
+    <string name="enter_height">Ingresar altura</string>
+    <string name="bmi_normal">El paciente se encuentra en el peso adecuado</string>
+    <string name="bmi_not_normal">El paciente NO se encuentra en el peso adecuado</string>
+    <string name="invalid_input">Entrada no valida</string>
+</resources>
+

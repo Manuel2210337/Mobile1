@@ -1,0 +1,13 @@
+<resources>
+    <string name="bmi_normal">Your BMI is normal</string>
+    <string name="bmi_not_normal">Your BMI is not in the normal range</string>
+    <string name="invalid_input">Invalid input. Please enter valid values.</string>
+    <string name="app_name">Proyecto de Moviles</string>
+    <string name="login_image_desc">Imagen de inicio de sesión</string>
+    <string name="email_label">email</string>
+    <string name="password_label">Contraseña</string>
+    <string name="login_button">Iniciar sesión</string>
+    <string name="enter_weight">Enter weight (kg)</string>
+    <string name="enter_height">Enter height (m)</string> <!-- Cambia el nombre -->
+    <string name="calculate_bmi">Calculate BMI</string>
+</resources>

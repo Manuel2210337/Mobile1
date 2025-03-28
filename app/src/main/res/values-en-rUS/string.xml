@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_image_desc">login_image</string>
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+    <string name="login_button">Login</string>
+    <string name="enter_weight">Enter weight(kg)</string>
+    <string name="calculate_bmi">Calculate bmi</string>
+    <string name="enter_height">Enter Height</string>
+    <string name="bmi_normal">Bmi normal</string>
+    <string name="bmi_not_normal">Bmi not normal</string>
+    <string name="invalid_input">Invalid input</string>
+</resources>
+
