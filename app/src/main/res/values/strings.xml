@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Proyecto de Moviles</string>
+    <string name="login_image_desc">Imagen de inicio de sesión</string>
+    <string name="email_label">email</string>
+    <string name="password_label">Contraseña</string>
+    <string name="login_button">Iniciar sesión</string>
+</resources>
