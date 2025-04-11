@@ -4,7 +4,7 @@
     <string name="email_label">Correo electrónico</string>
     <string name="password_label">Contraseña</string>
     <string name="login_button">Iniciar sesión</string>
-    <string name="enter_weight">Enter weight(kg)</string>
+    <string name="enter_weight">Ingresar peso(kg)</string>
     <string name="calculate_bmi">Calcular IMC</string>
     <string name="enter_height">Ingresar altura</string>
     <string name="bmi_normal">El paciente se encuentra en el peso adecuado</string>
