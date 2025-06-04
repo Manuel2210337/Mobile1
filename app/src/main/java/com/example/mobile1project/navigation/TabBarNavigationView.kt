@@ -16,19 +16,22 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.mobile1project.ids.IdsView
 import com.example.mobile1project.firstpartial.FirstPartialView
+import com.example.mobile1project.ids.Student.StudentViewModel.StudentListScreen
 import com.example.mobile1project.secondpartial.SecondPartialView
 import com.example.mobile1project.thirdpartial.ThirdPartialView
 
 sealed class ScreenNavigation(val route: String, val label: String, val icon: ImageVector) {
     object Ids : ScreenNavigation("ids", "IDs", Icons.Default.List)
     object FirstPartial : ScreenNavigation("first_partial", "Parcial 1", Icons.Default.Info)
+    object ThirdPartial : ScreenNavigation("third_partial", "Tercer Parcial", Icons.Default.List)
 }
 
 @Composable
 fun TabBarNavigationView(navController: NavHostController = rememberNavController()) {
     val items = listOf(
         ScreenNavigation.Ids,
-        ScreenNavigation.FirstPartial
+        ScreenNavigation.FirstPartial,
+        ScreenNavigation.ThirdPartial  // Asegúrate de agregar la ruta del tercer parcial
     )
 
     Scaffold(
@@ -59,13 +62,14 @@ fun TabBarNavigationView(navController: NavHostController = rememberNavControlle
     ) { innerPadding ->
         NavHost(
             navController = navController,
-            startDestination = ScreenNavigation.Ids.route,
+            startDestination = ScreenNavigation.ThirdPartial.route, // Utiliza el ScreenNavigation en lugar de una ruta hardcodeada
             modifier = Modifier.padding(innerPadding)
         ) {
             composable(ScreenNavigation.Ids.route) { IdsView(navController) }
             composable(ScreenNavigation.FirstPartial.route) { FirstPartialView() }
             composable(AppScreenNavigation.SecondPartial.route) { SecondPartialView() }
-            composable(AppScreenNavigation.ThirdPartial.route) { ThirdPartialView() }
+            composable(ScreenNavigation.ThirdPartial.route) { ThirdPartialView(navController) }
+            composable("student_list") { StudentListScreen() }
         }
     }
 }

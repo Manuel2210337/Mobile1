@@ -1,34 +1,31 @@
 package com.example.mobile1project
 
-import SumAppView
-import TemperatureViewModel
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
-import androidx.compose.ui.Modifier
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.mobile1project.ids.IMC.Views.BMIScreen
-import com.example.mobile1project.ids.IMC.viewmodels.BMIViewModel
-import com.example.mobile1project.ids.grados_Celsius.Views.TemperatureConverterScreen
-import com.example.mobile1project.ids.sum.viewmodel.SumViewModel
-import com.example.mobile1project.navigation.TabBarNavigationView
+import androidx.navigation.compose.rememberNavController
+import com.example.mobile1project.ids.restaurantes.navigation.NavGraph // ✅ importa tu NavGraph, no la del sistema
+import com.example.mobile1project.ids.restaurantes.viewmodels.RestauranteViewModel
 import com.example.mobile1project.ui.theme.Mobile1ProjectTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             Mobile1ProjectTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    TabBarNavigationView()
+                val navController = rememberNavController()
+                val viewModel: RestauranteViewModel = viewModel()
+
+                Surface(color = MaterialTheme.colorScheme.background) {
+                    NavGraph(navController = navController, viewModel = viewModel)
                 }
             }
         }
     }
 }
+
+
 
